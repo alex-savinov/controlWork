@@ -14,22 +14,26 @@ string[] ReadLineToArray(string value)
     }
 }
 
-
-void Main()
+string[] ConvertArrayForTask(string[] userArray)
 {
-    string[] userArray = ReadLineToArray("Введите обрабатываемый массив через пробел");
     string[] newArray = new string[0];
     for (int i = 0; i < userArray.Length; i++)
     {
         if (userArray[i].Length <= 3)
         {
             Array.Resize(ref newArray, newArray.Length + 1);
-            newArray[newArray.Length-1] = userArray[i];
+            newArray[newArray.Length - 1] = userArray[i];
         }
     }
-    
-   
-    Console.WriteLine($"[{string.Join("; ", newArray)}]");
+    return newArray;
+}
+
+
+void Main()
+{
+    string[] userArray = ReadLineToArray("Введите обрабатываемый массив через пробел");
+    Console.WriteLine($"\r\nИсходный массив:\r\n[{string.Join("; ", userArray)}]");
+    Console.WriteLine($"\r\nРезуальтат выполнения программы:\r\n[{string.Join("; ", ConvertArrayForTask(userArray))}]");
 }
 
 Main();
