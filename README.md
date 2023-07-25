@@ -21,7 +21,8 @@
 
 Ниже описана логика преобразования исходной строки (уже разбитой на массив слов) согласно условию задачи
 
-![ConvertArrayForTask](/ConvertArrayForTask.jpg)
+![ConvertArrayForTask1](/ConvertArrayForTask.jpg)
 
 
 Код задачи находится тут controlWork/exercise/Program.cs
+Если же использовать Linq , то можно сократить логику и не использовать буферный массив, как описанно в функции ConvertArrayForTask2()
