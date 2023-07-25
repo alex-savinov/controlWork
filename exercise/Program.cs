@@ -14,7 +14,7 @@ string[] ReadLineToArray(string value)
     }
 }
 //Функция принимает массив слов и искомую длину слов (по дефолту 3). Отсеивает слова
-string[] ConvertArrayForTask(string[] userArray, int maxLength = 3)
+string[] ConvertArrayForTask1(string[] userArray, int maxLength = 3)
 {
     string[] newArray = new string[0];
     for (int i = 0; i < userArray.Length; i++)
@@ -27,13 +27,24 @@ string[] ConvertArrayForTask(string[] userArray, int maxLength = 3)
     }
     return newArray;
 }
+//Функция принимает массив слов и искомую длину слов (по дефолту 3). Отсеивает слова
+string[] ConvertArrayForTask2(string[] userArray, int maxLength = 3)
+{
+     return userArray = userArray.Where(element => element.Length <= maxLength).ToArray();
+}
+
+
+
+
+
 
 
 void Main()
 {
     string[] userArray = ReadLineToArray("Введите обрабатываемый массив через пробел");
     Console.WriteLine($"\r\nИсходный массив:\r\n[{string.Join("; ", userArray)}]");
-    Console.WriteLine($"\r\nРезуальтат выполнения программы:\r\n[{string.Join("; ", ConvertArrayForTask(userArray))}]");
+    Console.WriteLine($"\r\nРезуальтат выполнения программы:\r\n[{string.Join("; ", ConvertArrayForTask1(userArray))}]");
+    Console.WriteLine($"\r\nРезуальтат выполнения программы:\r\n[{string.Join("; ", ConvertArrayForTask2(userArray))}]");
 }
 
 Main();
