@@ -22,3 +22,6 @@
 Ниже описана логика преобразования исходной строки (уже разбитой на массив слов) согласно условию задачи
 
 ![ConvertArrayForTask](/ConvertArrayForTask.jpg)
+
+
+Код задачи находится тут controlWork/exercise/Program.cs
