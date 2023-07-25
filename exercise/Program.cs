@@ -33,18 +33,14 @@ string[] ConvertArrayForTask2(string[] userArray, int maxLength = 3)
      return userArray = userArray.Where(element => element.Length <= maxLength).ToArray();
 }
 
-
-
-
-
-
-
 void Main()
 {
-    string[] userArray = ReadLineToArray("Введите обрабатываемый массив через пробел");
+   /* string[] userArray = ReadLineToArray("Введите обрабатываемый массив через пробел");
     Console.WriteLine($"\r\nИсходный массив:\r\n[{string.Join("; ", userArray)}]");
-    Console.WriteLine($"\r\nРезуальтат выполнения программы:\r\n[{string.Join("; ", ConvertArrayForTask1(userArray))}]");
-    Console.WriteLine($"\r\nРезуальтат выполнения программы:\r\n[{string.Join("; ", ConvertArrayForTask2(userArray))}]");
+    Console.WriteLine($"\r\nРезуальтат выполнения первой программы:\r\n[{string.Join("; ", ConvertArrayForTask1(userArray))}]");
+    Console.WriteLine($"\r\nРезуальтат выполнения второй программы:\r\n[{string.Join("; ", ConvertArrayForTask2(userArray))}]");*/
+    Console.WriteLine(Console.ReadLine()!.Split().Where(element => element.Length <= 3).ToArray());
+
 }
 
 Main();
